@@ -1,16 +1,17 @@
 class Pessoa {
-    constructor(nome, idade) {
-        this.nome = nome;
-        this.idade = idade;
-    }
+  constructor(nome, idade) {
+    this.nome = nome
+    this.idade = idade
+  }
 
-    apresentar() {
-        return `Olá, meu nome é ${this.nome} e eu tenho ${this.idade} anos.`;
-    }
+  apresentar() {
+    return `Olá, meu nome é ${this.nome}`
+  }
 
-    atualizarIdade(novaIdade) {
-        this.idade = novaIdade;
-    }
+  atualizarIdade(novaIdade) {
+    if (novaIdade < 0) throw new Error()
+    this.idade = novaIdade
+  }
 }
 
-module.exports = Pessoa;
+module.exports = Pessoa
