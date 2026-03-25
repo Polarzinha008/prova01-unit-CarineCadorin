@@ -1,14 +1,14 @@
 const ContaBancaria = require('../src/contaBancaria')
 
-const contaExemplo = {
+const criarConta = () => ({
   id: "001",
   titular: "Ugioni",
   saldo: 1000,
-  status: "ativa", // ativa | bloqueada | encerrada
+  status: "ativa",
   limite: 5000,
   criadaEm: new Date(),
-  atualizadaEm: new Date(),
-};
+  atualizadaEm: new Date()
+})
 
 test("Obter saldo", () => {
   const conta = new ContaBancaria(criarConta())
